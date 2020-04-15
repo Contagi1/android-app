@@ -39,25 +39,42 @@ body {
 
 /* Portrait layout (default) */
 .app {
-    background:url(../img/icon_ippocrate_512x512.png) no-repeat center top; /* 512px x 512px */
+    background:url(../img/icon_ippocrate_170x170.png) no-repeat center top; /* 170px x 200px */
     position:absolute;             /* position in the center of the screen */
     left:50%;
-    top:50%;
-    height:512px;                   /* text area height */
-    width:512px;                   /* text area width */
+    top:80%;
+    height:50px;                   /* text area height */
+    width:225px;                   /* text area width */
     text-align:center;
     padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
     margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
                                    /* offset horizontal: half of text area width */
 }
 
+.log {
+	  position:absolute;             /* position in the center of the screen */
+    left:50%;
+    top:10%;
+    height:50px;                   /* text area height */
+    width:225px;                   /* text area width */
+    text-align:center;
+    border: 1px black;
+}
+
+
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
     .app {
         background-position:left center;
+        top:48%;
+        left:40%;
         padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
         margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
-                                      /* offset horizontal: half of image width and text area width */
+    }
+    
+    .log {
+				left:50%;
+				top:10%;
     }
 }
 
@@ -104,4 +121,91 @@ h1 {
 .blink {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
+}
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    border-bottom: 1px solid #d3d3d3;
+    text-align: left;
+}
+
+li {
+    margin-left: -40px;
+    padding: 5px;
+    padding-top: 10px;
+    min-height: 50px;
+    border-top: 1px solid #d3d3d3;
+    font-size: 0.9em;
+}
+
+button {
+    -webkit-appearance: none;
+    font-size: 2em;
+    border-radius: 0px;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    min-width: 200px;
+    background-color: #f0f0ff;
+    color: blue;
+}
+
+#mainPage {
+    text-align:center;
+    margin: 10px;
+}
+
+#mainPage p {
+    text-align:left;
+}
+
+#detailPage {
+    text-align:center;
+}
+
+#detailPage pre {
+    text-align:left;
+}
+
+#statusDiv {
+    font-size: 1.9em;
+    margin-bottom: 10px;
+}
+
+#countDiv {
+    font-size: 4em;
+    margin-bottom: 20px;
+}
+
+#deviceIdDiv {
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+input[type=range] {
+    margin: 10px;
+    width: 90%;
+    height: 100px;
+}
+
+input[type='range']::-webkit-slider-thumb {
+    height: 50px;
+    width: 50px;
+}
+
+input[type=checkbox] {
+  width:30px;
+  height:30px;
+  margin:20px;
+}
+
+label {
+  font-size: 2em;
 }
